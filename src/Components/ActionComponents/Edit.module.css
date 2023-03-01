@@ -1,0 +1,47 @@
+
+.myform {
+    display: flex;
+    flex-direction: column;
+}
+.myform input {
+    height: 50px;
+    flex: 1;
+ /* optional */
+  }
+  .picture {
+    width: 200px;
+    height: 100px;
+  }
+  .inputfield {
+        width: 80%;
+        padding: 12px 20px;
+        margin: 15px 20px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 80px;
+  }
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 50px;
+  
+}
+.editbutton { 
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+.editbutton:hover {
+  color: #2d087e;
+  background-color: rgba(58, 34, 3, 0.6);
+}
