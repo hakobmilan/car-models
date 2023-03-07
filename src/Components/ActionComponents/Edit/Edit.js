@@ -69,36 +69,38 @@ const handleChange = (event) => {
  }
   return (
     <>
-    <div>Edit {id}</div>
     <div className={styles.container}>
 
     <form className={styles.myform} onSubmit={handleSubmit}>
             
             <label >
-                Name {" "}
+                Name
                 <input  className={styles.inputfield} 
                 type="text"  
                 name = "name" 
                 value={car.name}
                 onChange = {handleChange}
+                required
                 />
             </label >
             <label >
-                Model {" "}
+             Model
                 <input  className={styles.inputfield} 
                 type="text"  
                 name = "model" 
                 value={car.model}
                 onChange = {handleChange}
+                required
                 />
             </label>
             <label >
-                Year {" "}
+               Year
                 <input className={styles.inputfield} 
                 type="text"  
                 name = "year" 
                 value={car.year}
                 onChange = {handleChange}
+                required
                 />
             </label>
             <label>
@@ -108,6 +110,7 @@ const handleChange = (event) => {
                 name = "colour" 
                 value={car.colour}
                 onChange = {handleChange}
+                required
                 />
             </label>
             <label>
@@ -117,20 +120,17 @@ const handleChange = (event) => {
                 name = "description" 
                 value={car.description}
                 onChange = {handleChange}
+                required
                 />
             </label>
-            <label >
-                Image {" "}
-                <div >
-                    <img src={car.picture} alt="pictre" className={styles.picture} />
+            <label >                
+                    <img  src={car.picture} alt="pictre" className={styles.picture} />
                     <input className={styles.inputfield} 
                     id = "image"
                     type="file"  
                     name = "image" 
                     onChange={handleImageChange}
                     />
-                </div>
-       
               
             </label>
                     <button className={styles.editbutton} type ="submit">Edit</button>

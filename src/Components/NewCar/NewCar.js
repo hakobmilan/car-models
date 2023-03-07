@@ -60,6 +60,7 @@ function NewCar() {
                 name = "name" 
                 value={newcar.name}
                 onChange = {handleChange}
+                required
                 />
             </label >
             <label>
@@ -69,6 +70,7 @@ function NewCar() {
                 name = "model" 
                 value={newcar.model}
                 onChange = {handleChange}
+                required
                 />
             </label>
             <label >
@@ -78,6 +80,7 @@ function NewCar() {
                 name = "year" 
                 value={newcar.year}
                 onChange = {handleChange}
+                required
                 />
             </label>
             <label>
@@ -87,6 +90,7 @@ function NewCar() {
                 name = "colour" 
                 value={newcar.colour}
                 onChange = {handleChange}
+                required
                 />
             </label>
             <label >
@@ -96,12 +100,13 @@ function NewCar() {
                 type="file"  
                 name = "picture" 
                 onChange={handleImageChange}
+                required
                />
             </div>
             </label>
             <button type = "submit"  className={styles.mybutton}>Create Car</button>
           
-
+        
         </form>
         </div>
         </>

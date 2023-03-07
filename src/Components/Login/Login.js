@@ -31,9 +31,6 @@ function Login() {
             return
         }
         dispatch({
-            type: "LOGIN"
-        })
-        dispatch({
             type: "SUBMIT",
             payload: inputState
         })
@@ -52,6 +49,7 @@ function Login() {
                 value={inputState.email}
                 onChange = {handleChange}
                 placeholder = "Email"
+                required
                 />
             </label>
 
@@ -63,6 +61,7 @@ function Login() {
                 value={inputState.name}
                 onChange = {handleChange}
                 placeholder = "Name"
+                required
                 />
             </label>
 
@@ -75,6 +74,7 @@ function Login() {
                 value={inputState.password}
                 onChange = {handleChange}
                 placeholder = "Password"
+                required
                 />
             </label>
 

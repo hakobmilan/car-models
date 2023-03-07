@@ -1,0 +1,139 @@
+.header {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  .headerloggedin {
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .link {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .title {
+    margin: 0;
+    margin-right: 10px;
+  }
+  .rel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    
+    position: relative;
+   
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    font-size: 25px;
+    width: 8rem;
+    text-align: center;
+    margin-top: 0;
+    color: wheat;
+    background-color:rgb(180, 115, 29,0.6);
+  }
+  .menu li:hover {
+    color: green;
+  }
+  .navbar {
+    margin-right: 10px;
+  }
+  .icon {
+    cursor: pointer;
+    margin-top: 3px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .mobilecontainer {
+    max-width: 100px;
+    margin: auto;
+    background-color: #555;
+    height: 40px;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav a.iconm {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  
+  @media only screen and (max-width: 1030px) {
+    .navbar {
+      display: none;
+    }
+    .menu {
+      display: none;
+    };
+  }
+  @media only screen and (max-width: 736px) {
+    .title {
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 640px) {
+    .title {
+      font-size: 18px;
+    }
+    .mobilecontainer {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 380px) {
+    .title {
+      font-size: 16px;
+    }
+    .logo {
+      height: 40px;
+    }
+  }
+  @media only screen and (max-width: 364px) {
+    .title {
+      font-size: 13px;
+    }
+    .logo {
+      height: 30px;
+    }
+  }
+

@@ -2,15 +2,20 @@ import React, { useState } from 'react'
 import styles from './Home.module.css'
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
-import Popup from './Popup';
+import Popup from '../Popup/Popup';
 function Home() {
 
   const [isopen, setIsOpen] = useState(false);
-  console.log(isopen)
+  const [currId, setCurrId] = useState();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cars  =  useSelector( (state) => state.cars);
-  const [currId, setCurrId] = useState();
+  const [search,setSearch] = useState("");
+  
+  const filtredCars = cars.filter(car => {
+    return car.name.toLowerCase().includes(search.toLowerCase())
+  })
+  
   const handleDeleteButtonClick = (id) => {
     setCurrId(id);
   setIsOpen(true);
@@ -23,14 +28,18 @@ function Home() {
   });
   setIsOpen(false);
   }
-  
+
   return (
-    <>
+    <div className={styles.container}>
       {isopen? <Popup handleYesClick={handleYesClick} isopen = {isopen} setIsOpen = {setIsOpen}/> : null}
-      <h2>Please look our car parameters table</h2>
+      <h3 className={styles.h3tag}>Please look our car parameters table</h3>
+        <input value={search} onChange ={(e) => setSearch(e.target.value)} className={styles.search} type="search" placeholder='Search by name' />
+        <br></br>
+
       <button onClick={() => navigate("/create")} className={styles.button}>Create New Car</button>
+      <div className={styles.contdiv}>
       <table className={styles.cars}>
-        <tbody>
+        <thead>
           <tr>
             <th>Car name</th>
             <th>Car model</th>
@@ -39,8 +48,9 @@ function Home() {
             <th>Picture</th>
             <th>Action</th>
           </tr>
-
-          {cars ? cars.map((car) => (
+          </thead>
+          <tbody>
+          {filtredCars ? filtredCars.map((car) => (
             
            <tr key={car.id}>
               <td>{car.name}</td>
@@ -56,8 +66,9 @@ function Home() {
         )) : ''}
         </tbody>
       </table>
+      </div>
         
-    </>
+    </div>
   )
 }
 

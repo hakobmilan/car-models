@@ -1,0 +1,141 @@
+.contdiv {
+  overflow-x:scroll;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.button:hover {
+    color: #17441b;
+    background-color: rgb(180, 115, 29,0.6);
+}
+
+  .cars {
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.cars thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+}
+.cars th,
+.cars td {
+    padding: 12px 15px;
+}
+.cars tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.cars tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.cars tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+  .images {
+    
+        width: 200px;
+        height: 100px;
+  }
+
+
+/* CSS */
+.little {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 4px 2px;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.little:hover,
+.little:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.little:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.little:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+.search {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 210px;
+  height: 30px;
+}
+.searchbutton {
+  margin-top: 10px;
+  height: 30px;
+  margin-bottom: 30px;
+    margin-left: 5px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .cars th,
+  .cars td {
+    display: block;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .h3tag {
+    font-size: 16px;
+  }
+  .search {
+    width: 190px;
+  }
+  
+}
+@media only screen and (max-width: 380px) {
+  .h3tag {
+    font-size: 14px;
+  }
+  .button {
+    height: 40px;
+   width: 120px;
+    font-size: 12px;
+}
+}
+@media only screen and (max-width: 364px) {
+  .h3tag {
+    font-size: 11px;
+  }
+}
